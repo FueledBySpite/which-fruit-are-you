@@ -75,8 +75,13 @@
 
    <script>
     function showResults() {
-        alert("Thank you for completing the quiz! Click OK to see your results.");
-        window.open('results.html', '_blank'); // Change 'results.html' to the actual results page URL
+        var userEmail = prompt("Enter your email address to receive the results:");
+        if (userEmail) {
+            alert("Thank you! Your results will be sent to " + userEmail + ".");
+            // Here you could also trigger an email sending function or redirect to a server-side script
+        } else {
+            alert("No email entered. Please try submitting again and provide an email address.");
+        }
     }
     </script>
 </body>
